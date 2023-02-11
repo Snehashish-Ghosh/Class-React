@@ -1,0 +1,32 @@
+.services-area {
+  padding-bottom: 30px;
+  padding-top: 60px;
+  line-height: 1.2;
+}
+.services-area h2 {
+  font-size: 32px;
+  margin-bottom: 34px;
+}
+.services-area .single-service {
+  border: 1px solid #ededed;
+  border-radius: 0 0 6px 6px;
+}
+.services-area .single-service h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 15px 0 10px;
+}
+.services-area .single-service h5 {
+  font-size: 16px;
+  margin: 10px 15px 0 10px;
+}
+.services-area .single-service p {
+  margin: 10px 15px 16px 10px;
+}
+
+.services-area .single-service button {
+  background-color: #7952b3;
+  border: 1px solid #7952b3;
+  color: #fff;
+  min-width: 120px;
+}
