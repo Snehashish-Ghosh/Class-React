@@ -12,7 +12,7 @@ const NotFound = () => {
         <Container>
           <div className="not-found-text text-center">
             <h2>404</h2>
-            <h3>Not Found</h3>
+            <h3>Page Not Found!</h3>
             <NavLink to="/" className="nav-link">
               <button>Go Home</button>
             </NavLink>
