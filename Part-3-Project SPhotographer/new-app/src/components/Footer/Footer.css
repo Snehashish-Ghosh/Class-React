@@ -1,8 +1,9 @@
 .footer-area {
   padding-bottom: 30px;
-  padding-top: 50px;
+  padding-top: 60px;
   background-color: #212529;
   color: #fff;
 }
-.footer-area {
+.footer-area p {
+  margin-bottom: 0;
 }

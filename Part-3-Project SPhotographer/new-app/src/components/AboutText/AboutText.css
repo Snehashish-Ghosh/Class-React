@@ -1,0 +1,12 @@
+.about-text {
+  padding: 25px;
+}
+.about-text h3 {
+  font-size: 18px;
+}
+.about-text h2 {
+  font-size: 32px;
+}
+.about-text p {
+  margin-bottom: 1rem;
+}

@@ -1,13 +1,14 @@
-import Logo from "../../images/logo.png";
+import image from "../../images/logo.png";
 import Container from "react-bootstrap/esm/Container";
 import "./Footer.css";
+import Logo from "../Logo/Logo";
 
 const Footer = () => {
   return (
     <section className="footer-area">
       <Container className="text-center">
-        <img src={Logo} className="w-15 py-3" alt="" />
-        <p>© 2022 Spotographer, All Rights Reserved.</p>
+        <Logo image={image} />
+        <p className="mt-3">© 2022 Spotographer, All Rights Reserved.</p>
       </Container>
     </section>
   );

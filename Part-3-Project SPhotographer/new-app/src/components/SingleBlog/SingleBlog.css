@@ -1,0 +1,14 @@
+.single-blog-post {
+  border: 1px solid #ededed;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+.single-blog-post h3 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+.single-blog-post p {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
