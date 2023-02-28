@@ -12,3 +12,13 @@
 .header .navbar-nav a:last-child:hover {
   background-color: #212529;
 }
+.theme-button button {
+  background-color: #7952b3;
+  border: 1px solid #7952b3;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 4px;
+}
+.theme-button button:hover {
+  background-color: #212529;
+}

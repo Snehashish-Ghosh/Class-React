@@ -1,0 +1,17 @@
+.gitSignUp button {
+  background-color: #7952b3;
+  border: 1px solid #7952b3;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.gitSignUp button:hover {
+  background-color: #fff;
+  color: black;
+}
+.gitSignUp button img {
+  margin-right: 8px;
+  transform: translateY(-10%);
+}

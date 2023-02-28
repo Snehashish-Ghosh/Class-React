@@ -1,0 +1,4 @@
+.more-area {
+  padding: 100px 0;
+  min-height: calc(100vh - 159px);
+}

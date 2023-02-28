@@ -5,8 +5,16 @@ import image from "../../images/logo.png";
 import Logo from "../Logo/Logo";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  // Sign Out
+  const handleLogOut = () => {
+    signOut(auth);
+  };
   return (
     <header className="header">
       <Navbar bg="dark" variant="dark" expand="lg" className="py-3 fixed-top">
@@ -26,9 +34,22 @@ const Header = () => {
               <NavLink to="/blog" className="nav-link">
                 Blog
               </NavLink>
-              <NavLink to="/login" className="nav-link">
-                Login
+              <NavLink to="/more" className="nav-link">
+                More
               </NavLink>
+              {user ? (
+                <NavLink
+                  to="/login"
+                  className="nav-link"
+                  onClick={handleLogOut}
+                >
+                  Log Out
+                </NavLink>
+              ) : (
+                <NavLink to="/login" className="nav-link btn btn-primary">
+                  Login
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

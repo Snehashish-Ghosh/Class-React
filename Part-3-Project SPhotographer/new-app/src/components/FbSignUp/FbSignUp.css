@@ -1,0 +1,20 @@
+.fbSignUp button {
+  background-color: #7952b3;
+  border: 1px solid #7952b3;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.fbSignUp button:hover {
+  background-color: #fff;
+  color: black;
+}
+.fbSignUp button img {
+  margin-right: 8px;
+  transform: translateY(-10%);
+}
+.fbSignUp img {
+  height: 20px;
+}

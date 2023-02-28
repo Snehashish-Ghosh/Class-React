@@ -5,19 +5,22 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import "./Login.css";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import "./Register.css";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useState } from "react";
 import auth from "../../firebase.init";
 import { NavLink } from "react-router-dom";
+import GoogleSignUp from "../GoogleSignUp/GoogleSignUp";
+import GitSignUp from "../GitSignUp/GitSignUp";
+import FbSignUp from "../FbSignUp/FbSignUp";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const messageDiv = document.getElementById("message-div");
 
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
   if (error) {
     messageDiv.innerHTML = error;
@@ -26,13 +29,13 @@ const Login = () => {
     messageDiv.innerHTML = "Loading...";
   }
   if (user) {
-    messageDiv.innerHTML = "Login Successfully";
+    messageDiv.innerHTML = "User Registered";
   }
 
   return (
-    <section className="login-area text-center">
+    <section className="register-area text-center">
       <Container>
-        <SectionHeading heading="Login Now" />
+        <SectionHeading heading="Create an Account" />
         <div className="reg-area py-5">
           <Row>
             <Col lg={{ span: 6, offset: 3 }}>
@@ -54,19 +57,23 @@ const Login = () => {
                 />
               </Form.Group>
               <p>
-                New to Spotographer?
-                <NavLink to="/register" className="nav-link reg-link">
-                  Please Create New Account.
+                Already Have an Account?
+                <NavLink to="/login" className="nav-link reg-link">
+                  Login Here.
                 </NavLink>
               </p>
               <Button
                 variant="primary"
                 type="submit"
-                onClick={() => signInWithEmailAndPassword(email, password)}
+                onClick={() => createUserWithEmailAndPassword(email, password)}
               >
-                Login
+                Register
               </Button>
-              <div id="message-div" className="py-3"></div>
+              <div id="message-div" className="mt-3"></div>
+              <span className="or-style">or</span>
+              <GoogleSignUp />
+              <GitSignUp />
+              <FbSignUp />
             </Col>
           </Row>
         </div>
@@ -75,4 +82,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
